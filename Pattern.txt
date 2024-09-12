@@ -30,3 +30,48 @@ int main()
     
     return 0;
 }
+
+
+
+
+//second approach
+
+#include <stdio.h>
+
+int main() 
+{
+    int n;
+    scanf("%d", &n);
+
+    // The size of the matrix will be (2n - 1) x (2n - 1)
+    int size = 2 * n - 1;
+
+    // Generate and print the matrix
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            // Calculate the minimum distance to an edge
+            int top = i;
+            int bottom = size - i - 1;
+            int left = j;
+            int right = size - j - 1;
+
+            // Find the minimum distance
+            int min = Top;
+            if (bottom < min) {
+                min = bottom;
+            }
+            if (left < min) {
+                min = left;
+            }
+            if (right < min) {
+                min = right;
+            }
+
+            // Print the value based on the minimum distance
+            printf("%d ", n - minDist);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
