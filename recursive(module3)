@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+// Recursive function to find the nth term
+int find_nth_term(int n, int a, int b, int c) {
+    if (n == 1) return a; // First term
+    if (n == 2) return b; // Second term
+    if (n == 3) return c; // Third term
+    
+    // Recursive case: the nth term is the sum of the previous three terms
+    return find_nth_term(n - 1, a, b, c) +
+           find_nth_term(n - 2, a, b, c) +
+           find_nth_term(n - 3, a, b, c);
+}
+
+int main() {
+    int n, a, b, c;
+    scanf("%d %d %d %d", &n, &a, &b, &c); // Read n and the first three terms
+    printf("%d\n", find_nth_term(n, a, b, c)); // Call the function and print the result
+    return 0;
+}
